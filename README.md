@@ -1,1 +1,3 @@
-# React-TextUtils-Website
+## TextUtils App
+
+1. Props and PropTypes
