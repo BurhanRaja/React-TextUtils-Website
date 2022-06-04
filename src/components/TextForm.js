@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-export default function TextForm(props) {
+export default function TextForm() {
     // Javascript
     const [text, setText] = useState("")
 
@@ -26,7 +26,7 @@ export default function TextForm(props) {
     return(
         <>
         <div className="container my-3">
-            <h1>{props.heading}</h1>
+            <h1>Enter text to Analyze</h1>
             <div className="mb-3">
                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="8" value={text} onChange={handleOnChange} placeholder="Enter text here"></textarea>
             </div>
