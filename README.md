@@ -16,3 +16,6 @@ OnChange function is necessary so, that you can change the innertext because we 
 3. Enable and disable dark mode
 
 I learnt about how to use `style` in html tags in JSX and how to enable and disable the dark mode and light mode for this app.
+
+I learnt about enabling dark mode of the whole body and navbar. The whole website can now be in dark mode also.
+To change the content of website when dark mode enabled `style={{color: props.mode === 'light' ? 'black': 'white'}}` or if you use bootstrap `text-${props.mode === 'light' ? 'black': 'light'}`}` 
