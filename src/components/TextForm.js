@@ -9,34 +9,40 @@ export default function TextForm(props) {
     const handleUpCase = () => {
         let newText = text.toUpperCase()
         setText(newText)
+        props.showAlert("Changed to UpperCase", "success")
     }
     // lowercase
     const handleLowCase = () => {
         let newText = text.toLowerCase()
         setText(newText)
+        props.showAlert("Changed to LowerCase", "success")
     }
     // 'empty'
     const handleclearCase = () => {
         setText("")
+        props.showAlert("Text Cleared", "success")
     }
     // Copy Clipboard
     const handleCopy = () => {
         let newText = document.getElementById("exampleFormControlTextarea1")
         newText.select()
         navigator.clipboard.writeText(newText.value)
+        props.showAlert("Copied to Clipboard", "success")
     }
-    // Remove Extra Space
+    // Remove Punctuations
     const handlePunctuation = () => {
         let newText = text
         .replace(/[.,;:'"!#$%*?]/g, "")
         .replace(/s{2,}/g, " ")
         console.log(text)
         setText(newText)
+        props.showAlert("Punctuation removed", "success")
     }
-
+    // Remove Extraa Spaces
     const handleSpace = () => {
         let newText = text.split(/[ ]+/)
         setText(newText.join(" "))
+        props.showAlert("Extra Space Removed", "success")
     }
 
     // TextArea onchange
@@ -50,7 +56,7 @@ export default function TextForm(props) {
         <div className="container my-3" style={{color: props.mode === 'light' ? 'black': 'white'}}>
             <h1>{props.heading}</h1>
             <div className="mb-3">
-                <textarea className="form-control" id="exampleFormControlTextarea1" rows="8" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode === 'light' ? 'white': 'black', color: props.mode === 'light' ? 'black': 'white'}} placeholder="Enter text here"></textarea>
+                <textarea className="form-control" id="exampleFormControlTextarea1" rows="8" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode === 'light' ? 'white': '#3a3a3a', color: props.mode === 'light' ? 'black': 'white'}} placeholder="Enter text here"></textarea>
             </div>
             <button className="btn btn-primary mx-1" onClick={handleUpCase}>Convert to UpperCase</button>
             <button className="btn btn-primary mx-1" onClick={handleLowCase}>Convert to UpperCase</button>

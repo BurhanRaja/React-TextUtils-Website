@@ -19,3 +19,7 @@ I learnt about how to use `style` in html tags in JSX and how to enable and disa
 
 I learnt about enabling dark mode of the whole body and navbar. The whole website can now be in dark mode also.
 To change the content of website when dark mode enabled `style={{color: props.mode === 'light' ? 'black': 'white'}}` or if you use bootstrap `text-${props.mode === 'light' ? 'black': 'light'}`}` 
+
+4. Alerts system is added
+
+On Every activity done on the website an alert will be showcased for 1.5 sec as to remind what action did the user perform. The is created in `App.js` file to send it to all the components
