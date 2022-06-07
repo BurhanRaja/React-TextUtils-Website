@@ -41,9 +41,9 @@ function App() {
     <>
     {/* The given arguements are props passed in Navbar function */}
     {/* mode, togglemode for dark mode for body and different html text*/}
-    <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleMode={toggleMode}/>
+    <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleMode={toggleMode} />
     <Alert alert={alerts}/>
-    <TextForm showAlert={showAlerts} heading="Enter text to Analyze" mode={mode} toggleMode={toggleMode}/>
+    <TextForm showAlert={showAlerts} heading="Enter text to Analyze" mode={mode}/>
     {/* <About /> */}
     </>
   );
