@@ -9,18 +9,18 @@ export default function TextForm(props) {
     const handleUpCase = () => {
         let newText = text.toUpperCase()
         setText(newText)
-        props.showAlert("Changed to UpperCase", "success")
+        props.showAlert("Changed to UPPERCASE", "success")
     }
     // lowercase
     const handleLowCase = () => {
         let newText = text.toLowerCase()
         setText(newText)
-        props.showAlert("Changed to LowerCase", "success")
+        props.showAlert("Changed to lowercase", "success")
     }
     // 'empty'
     const handleclearCase = () => {
         setText("")
-        props.showAlert("Text Cleared", "success")
+        props.showAlert("Text Cleared ' ' ", "success")
     }
     // Copy Clipboard
     const handleCopy = () => {
