@@ -1,9 +1,14 @@
 import './App.css';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar'
 import TextForm from './components/TextForm';
 import React, {useState} from 'react'
 import Alert from './components/Alert';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
 
 function App() {
 
@@ -41,10 +46,14 @@ function App() {
     <>
     {/* The given arguements are props passed in Navbar function */}
     {/* mode, togglemode for dark mode for body and different html text*/}
-    <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleMode={toggleMode} />
-    <Alert alert={alerts}/>
-    <TextForm showAlert={showAlerts} heading="Enter text to Analyze" mode={mode}/>
-    {/* <About /> */}
+    <Router>
+      <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alerts}/>
+      <Routes>
+        <Route path="/" element={<TextForm showAlert={showAlerts} heading="Enter text to Analyze" mode={mode}/>}> </Route>
+          <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
     </>
   );
 }

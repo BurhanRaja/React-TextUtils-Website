@@ -22,4 +22,12 @@ To change the content of website when dark mode enabled `style={{color: props.mo
 
 4. Alerts system is added
 
-On Every activity done on the website an alert will be showcased for 1.5 sec as to remind what action did the user perform. The is created in `App.js` file to send it to all the components
+On Every activity done on the website an alert will be showcased for 1.5 sec as to remind what action did the user perform. The is created in `App.js` file to send it to all the components.
+
+5. React Router
+
+React Router is used to load pages fast. If a component is common in every page, it will not load the whole page again but the parts that are unique to the page. The jump from one page to another happens without any loading.
+
+Here, I have used react router to route the Home page and about page. The components like navbar and alerts are same for all pages.
+
+
